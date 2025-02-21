@@ -5,16 +5,19 @@ using UnityEditor;
 using UnityEngine.Experimental.GlobalIllumination;
 using UnityEditor.Tilemaps;
 
-public class Turret : MonoBehaviour
+public class Tower_Base : MonoBehaviour
 {
     [Header("Configurables References")]
     [SerializeField] float targetingRange = 5f;
+    [SerializeField] float rotationSpeed = 15f;
+    [SerializeField] float bulletsPerSecond = 1f;
+    [SerializeField] public int damage = 1;
     [SerializeField] LayerMask enemyMask;
-
-    [Header("Object References")]
-    [SerializeField] Transform turretRotaionPoint;
+    [SerializeField] GameObject bulletPrefab;
+    [SerializeField] Transform firingPoint;
 
     Transform target;
+    float timeUntilFire;
 
     void Update()
     {
@@ -25,6 +28,29 @@ public class Turret : MonoBehaviour
         }
 
         RotateTowardsTarget();
+
+        if (!CheckTargetDistance())
+        {
+            target = null;
+        }
+        else
+        {
+            timeUntilFire += Time.deltaTime;
+
+            if (timeUntilFire >= 1f / bulletsPerSecond)
+            {
+                Shoot();
+                timeUntilFire = 0f;
+            }
+        }
+    }
+
+    void Shoot()
+    {
+        GameObject bulletObject = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
+        Bullet_Base bulletScript = bulletObject.GetComponent<Bullet_Base>();
+        bulletScript.SetTarget(target);
+        bulletScript.damage = damage;
     }
 
     void FindTarget()
@@ -37,12 +63,17 @@ public class Turret : MonoBehaviour
         }
     }
 
+    bool CheckTargetDistance()
+    {
+        return Vector2.Distance(target.position, transform.position) <= targetingRange;
+    }
+
     void RotateTowardsTarget()
     {
         float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg;
 
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle + 90));
-        transform.rotation = targetRotation;
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 
     void OnDrawGizmosSelected()

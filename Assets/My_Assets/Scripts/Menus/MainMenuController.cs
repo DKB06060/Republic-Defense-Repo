@@ -17,7 +17,7 @@ public class MainMenuController : MonoBehaviour
 
     private void Start()
     {
-        gameManager.currentHero = "General Skywalker";
+        gameManager.currentHero = gameManager.anakinPrefab;
     }
 
     public void Play()

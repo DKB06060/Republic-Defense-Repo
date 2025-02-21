@@ -23,17 +23,17 @@ public class EnemySpawner : MonoBehaviour
     int enemiesLeftToSpawn;
     bool isSpawning = false;
 
-    private void Awake()
+    void Awake()
     {
         onEnemyDestroy.AddListener(EnemyDestroyed);
     }
 
-    private void Start()
+    void Start()
     {
         StartCoroutine(StartWave());
     }
 
-    private void Update()
+    void Update()
     {
         if (!isSpawning)
         {
@@ -78,7 +78,8 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        GameObject prefabToSpawn = enemyPrefabs[0];
+        int index = Random.Range(0, enemyPrefabs.Length);
+        GameObject prefabToSpawn = enemyPrefabs[index];
         Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
     }
 

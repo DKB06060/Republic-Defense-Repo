@@ -17,4 +17,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/My_Assets/Scenes/Kashyyyk.unity
     guid: 2c22998e64e2e8f41ad8a6b4c3d6ff6d
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: a90ce9a67306cd342b8162277b75fbad, type: 2}
