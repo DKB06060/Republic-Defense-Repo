@@ -17,6 +17,15 @@ public class Plot_Base : MonoBehaviour
             }
 
             Tower towerToBuild = Build_Manager.main.GetSelectedTower();
+
+            if (towerToBuild.cost > LevelManager.main.credits)
+            {
+                //Not enough credits
+                return;
+            }
+
+            LevelManager.main.DecreaseCredits(towerToBuild.cost);
+
             tower = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
         }
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Build_Manager : MonoBehaviour
 {
@@ -9,15 +10,25 @@ public class Build_Manager : MonoBehaviour
     [Header("Script References")]
     [SerializeField] GameManager gameManager;
 
-    [Header("Configurables References")]
-
-
     [Header("Object References")]
     [SerializeField] List<Tower> towers;
-    [SerializeField] List<Hero> heroes;
+    [SerializeField] Button heroButton;
+ 
+    [Header("Hero References")]
+    [SerializeField] GameObject rexPrefab;
+    [SerializeField] Sprite rexSprite;
+    [SerializeField] GameObject codyPrefab;
+    [SerializeField] Sprite codySprite;
+    [SerializeField] GameObject anakinPrefab;
+    [SerializeField] Sprite anakinSprite;
+    [SerializeField] GameObject kenobiPrefab;
+    [SerializeField] Sprite kenobiSprite;
+    [SerializeField] GameObject rd2dPrefab;
+    [SerializeField] Sprite rd2dSprite;
+    [SerializeField] GameObject c3poPrefab;
+    [SerializeField] Sprite c3poSprite;
 
     int selectedTower = 0;
-    int selectedHero = 0;
 
     void Awake()
     {
@@ -29,18 +40,18 @@ public class Build_Manager : MonoBehaviour
         return towers[selectedTower];
     }
 
-    public Hero GetSelectedHero()
-    {
-        return heroes[selectedHero];
-    }
-
     public void SetSelectedTower(int _selectedTower)
     {
         selectedTower = _selectedTower;
     }
 
-    public void SetSelectedHero(int _selectedHero)
+    public void SetTowerType(string towerType)
     {
-        selectedHero = _selectedHero;
+        GetTowerType(towerType);
+    }
+
+    public string GetTowerType(string _type)
+    {
+        return _type;
     }
 }
