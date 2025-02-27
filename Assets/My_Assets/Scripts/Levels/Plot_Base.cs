@@ -16,17 +16,18 @@ public class Plot_Base : MonoBehaviour
                 return;
             }
 
-            Tower towerToBuild = Build_Manager.main.GetSelectedTower();
+            GameObject towerToBuild = Build_Manager.main.GetSelectedTower();
+            Tower_Info towerToBuildScript = towerToBuild.GetComponent<Tower_Info>();
 
-            if (towerToBuild.cost > LevelManager.main.credits)
+            if (towerToBuildScript.cost > LevelManager.main.credits)
             {
                 //Not enough credits
                 return;
             }
 
-            LevelManager.main.DecreaseCredits(towerToBuild.cost);
+            LevelManager.main.DecreaseCredits(towerToBuildScript.cost);
 
-            tower = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
+            tower = Instantiate(towerToBuildScript.prefab, transform.position, Quaternion.identity);
         }
     }
 
@@ -37,16 +38,17 @@ public class Plot_Base : MonoBehaviour
             return;
         }
 
-        Tower towerToBuild = Build_Manager.main.GetSelectedTower();
+        GameObject towerToBuild = Build_Manager.main.GetSelectedTower();
+        Tower_Info towerToBuildScript = towerToBuild.GetComponent<Tower_Info>();
 
-        if (towerToBuild.cost > LevelManager.main.credits)
+        if (towerToBuildScript.cost > LevelManager.main.credits)
         {
             //Not enough credits
             return;
         }
 
-        LevelManager.main.DecreaseCredits(towerToBuild.cost);
+        LevelManager.main.DecreaseCredits(towerToBuildScript.cost);
 
-        tower = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
+        tower = Instantiate(towerToBuildScript.prefab, transform.position, Quaternion.identity);
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3692941919909448073}
   - component: {fileID: 2677146635977400903}
   - component: {fileID: 2727843744290008093}
+  - component: {fileID: -2345501263414410618}
   m_Layer: 0
   m_Name: Heavy_Weapons_Specialist
   m_TagString: Untagged
@@ -101,11 +102,30 @@ MonoBehaviour:
   targetingRange: 2
   rotationSpeed: 100
   bulletsPerSecond: 5
+  damage: 1
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
   bulletPrefab: {fileID: 4386835206828422869, guid: 5f63a9feb81f6dd489cd3bd782d41b32, type: 3}
   firingPoint: {fileID: 7334315250919414515}
+  name: HeavyWeaponsSpecialist
+  cost: 150
+  prefab: {fileID: 2992516513019363106}
+--- !u!114 &-2345501263414410618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2992516513019363106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96688d9d60103184ca352466c76055c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: HeavyWeaponsSpecialist
+  cost: 150
+  prefab: {fileID: 2992516513019363106}
 --- !u!1 &8367725712967220350
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,14 +5,14 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "GameManager", menuName = "ScriptableObjects", order = 1)]
 public class GameManager : ScriptableObject
 {
-    public Tower anakinPrefab;
-    public Tower obiwanPrefab;
-    public Tower captainRexPrefab;
-    public Tower commanderCodyPrefab;
-    public Tower r2d2Prefab;
-    public Tower c3poPrefab;
+    public GameObject anakinPrefab;
+    public GameObject obiwanPrefab;
+    public GameObject captainRexPrefab;
+    public GameObject commanderCodyPrefab;
+    public GameObject r2d2Prefab;
+    public GameObject c3poPrefab;
 
-    public Tower currentHero;
+    public GameObject currentHero;
     public string currentMap;
     public string currentDifficulty;
 

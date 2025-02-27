@@ -11,22 +11,7 @@ public class Build_Manager : MonoBehaviour
     [SerializeField] GameManager gameManager;
 
     [Header("Object References")]
-    [SerializeField] List<Tower> towers;
-    [SerializeField] Button heroButton;
- 
-    [Header("Hero References")]
-    [SerializeField] GameObject rexPrefab;
-    [SerializeField] Sprite rexSprite;
-    [SerializeField] GameObject codyPrefab;
-    [SerializeField] Sprite codySprite;
-    [SerializeField] GameObject anakinPrefab;
-    [SerializeField] Sprite anakinSprite;
-    [SerializeField] GameObject kenobiPrefab;
-    [SerializeField] Sprite kenobiSprite;
-    [SerializeField] GameObject rd2dPrefab;
-    [SerializeField] Sprite rd2dSprite;
-    [SerializeField] GameObject c3poPrefab;
-    [SerializeField] Sprite c3poSprite;
+    [SerializeField] List<GameObject> towers;
 
     int selectedTower = 0;
 
@@ -35,7 +20,7 @@ public class Build_Manager : MonoBehaviour
         main = this;
     }
     
-    public Tower GetSelectedTower()
+    public GameObject GetSelectedTower()
     {
         return towers[selectedTower];
     }
@@ -43,15 +28,5 @@ public class Build_Manager : MonoBehaviour
     public void SetSelectedTower(int _selectedTower)
     {
         selectedTower = _selectedTower;
-    }
-
-    public void SetTowerType(string towerType)
-    {
-        GetTowerType(towerType);
-    }
-
-    public string GetTowerType(string _type)
-    {
-        return _type;
     }
 }

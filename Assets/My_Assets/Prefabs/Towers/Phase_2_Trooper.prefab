@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 20908698453235599}
   - component: {fileID: 433801523600830706}
   - component: {fileID: 2853776398511846608}
+  - component: {fileID: -8352253420251475589}
   m_Layer: 0
   m_Name: Phase_2_Trooper
   m_TagString: Untagged
@@ -132,8 +133,27 @@ MonoBehaviour:
   targetingRange: 3
   rotationSpeed: 100
   bulletsPerSecond: 1.25
+  damage: 1
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
   bulletPrefab: {fileID: 4386835206828422869, guid: 5f63a9feb81f6dd489cd3bd782d41b32, type: 3}
   firingPoint: {fileID: 1545343765049986834}
+  name: Phase2Trooper
+  cost: 120
+  prefab: {fileID: 6101606131495539383}
+--- !u!114 &-8352253420251475589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6101606131495539383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96688d9d60103184ca352466c76055c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Phase2Trooper
+  cost: 140
+  prefab: {fileID: 6101606131495539383}

@@ -3,7 +3,14 @@ guid: 0d6c8b2d69c81f9429b10b674012f2d1
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - anakinPrefab: {fileID: 2839976644338131365, guid: 2fb2356cb40f67e4c8f25920926593dc, type: 3}
+  - obiwanPrefab: {fileID: 109294290339507128, guid: 93086af98b690e748810eb9cae8a3d13, type: 3}
+  - captainRexPrefab: {fileID: 1368017554288400325, guid: fa9b8f9c9d478144eb0cd01061ad4df2, type: 3}
+  - commanderCodyPrefab: {fileID: 8058645673078463622, guid: b863a9c1bca402d42a7bde89ace82be4, type: 3}
+  - r2d2Prefab: {fileID: 3655194161252312162, guid: bc46f0746e8f9b54bb30dcb1235d7d44, type: 3}
+  - c3poPrefab: {fileID: 53310252701955537, guid: 9bb4654405f6bb843ab9d3eadc68b937, type: 3}
+  - currentHero: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

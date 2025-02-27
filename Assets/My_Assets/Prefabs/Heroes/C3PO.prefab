@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2954436137580645568
+--- !u!1 &53310252701955537
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,71 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8249051982736874301}
+  - component: {fileID: 7165657051332530728}
+  - component: {fileID: 2129938567328211082}
+  - component: {fileID: 8982012237697088164}
+  - component: {fileID: -4504102860395385669}
   m_Layer: 0
-  m_Name: FiringPoint
+  m_Name: C3PO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8249051982736874301
+--- !u!4 &7165657051332530728
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2954436137580645568}
+  m_GameObject: {fileID: 53310252701955537}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.215, y: -1.075, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2752322866278808752}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5310304874394697354
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2752322866278808752}
-  - component: {fileID: 4124494292254063223}
-  - component: {fileID: 8669673569064362923}
-  - component: {fileID: 7898162562433931711}
-  m_Layer: 0
-  m_Name: Long_Range_Specialist
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2752322866278808752
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5310304874394697354}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8249051982736874301}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4124494292254063223
+--- !u!212 &2129938567328211082
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5310304874394697354}
+  m_GameObject: {fileID: 53310252701955537}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -107,53 +75,41 @@ SpriteRenderer:
   m_SortingLayerID: -2081951447
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2413cbd1b475c7f4c8714ddb5ccbe000, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e821af4fb18f9a74a9dea3b1b0fe57d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8669673569064362923
+--- !u!114 &8982012237697088164
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5310304874394697354}
+  m_GameObject: {fileID: 53310252701955537}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e7e5764db4936c409d323c7c1df120b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e437b2ddcda6d542a6a7b7638116a10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetingRange: 500
-  rotationSpeed: 100
-  bulletsPerSecond: 0.5
-  damage: 2
-  enemyMask:
-    serializedVersion: 2
-    m_Bits: 64
-  bulletPrefab: {fileID: 4386835206828422869, guid: 5f63a9feb81f6dd489cd3bd782d41b32, type: 3}
-  firingPoint: {fileID: 8249051982736874301}
-  name: LongRangeSpecialist
-  cost: 200
-  prefab: {fileID: 5310304874394697354}
---- !u!114 &7898162562433931711
+--- !u!114 &-4504102860395385669
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5310304874394697354}
+  m_GameObject: {fileID: 53310252701955537}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96688d9d60103184ca352466c76055c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: LongRangeSpecialist
-  cost: 200
-  prefab: {fileID: 5310304874394697354}
+  name: C-3PO
+  cost: 250
+  prefab: {fileID: 53310252701955537}

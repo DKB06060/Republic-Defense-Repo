@@ -7,14 +7,23 @@ public class ShopMenu : MonoBehaviour
 {
     [Header("Object References")]
     [SerializeField] Text creditsUI;
+    [SerializeField] GameObject towerMenu;
+    [SerializeField] GameObject heroMenu;
 
-    private void Update()
+    void Start()
+    {
+        towerMenu.SetActive(true);
+        heroMenu.SetActive(false);
+    }
+
+    void Update()
     {
         creditsUI.text = "Current Credits: " + LevelManager.main.credits.ToString();
     }
 
-    public void SetSelected()
+    public void toggleHeroTab()
     {
-
+        heroMenu.SetActive(!heroMenu.activeInHierarchy);
+        towerMenu.SetActive(!towerMenu.activeInHierarchy);
     }
 }
